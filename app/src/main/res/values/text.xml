@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_with_paragraphs">
+        We are a non-profit organisation aimed at helping young women
+        to learn more about technology and break into tech careers. Whether
+        you new to coding or a software engineer, we aim to provide a range
+        of workshops and talks for all levels. Subscribe to our weekly
+        newsletter below to access exclusive events! :)
+    </string>
+</resources>
