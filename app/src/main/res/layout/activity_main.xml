@@ -4,66 +4,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context="com.winsomeyuen.codergirls.MainActivity">
 
 <ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/above_layout"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:id="@+id/banner"
-        android:src="@drawable/banner"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/banner"
-        android:id="@+id/title"
-        android:textSize="36sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@color/colorText"
-        android:padding="20dp"
-        android:text="Welcome" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title"
+            android:textSize="55sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorText"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="CoderGirls" />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:textSize="16sp"
-        android:padding="10dp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@color/colorText"
-        android:text="@string/text_with_paragraphs"
-        android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"
+            android:id="@+id/bio"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorText"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/text2" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-        android:layout_toLeftOf="@+id/email"
-        android:src="@drawable/mail"/>
+        <ImageView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bio"
+            android:layout_toLeftOf="@+id/email"
+            android:adjustViewBounds="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mail"/>
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-        android:layout_centerHorizontal="true"
-        android:textSize="16sp"
-        android:layout_margin="4dp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@color/colorText"
-        android:text="CoderGirls@hotmail.com \n" />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bio"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_margin="4dp"
+            android:paddingTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorText"
+            android:text="CoderGirls@hotmail.com" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:paddingLeft="14dp"
+            android:paddingTop="49dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/post1"
+                android:adjustViewBounds="true"
+                android:maxHeight="162dp"
+                android:maxWidth="162dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/workspace" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/post2"
+                android:layout_marginTop="13dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="162dp"
+                android:maxHeight="162dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/girls"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:paddingRight="14dp"
+            android:paddingTop="47dp">
+
+            <TextView
+                android:id="@+id/post1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="2dp"
+                android:paddingTop="5dp"
+                android:text="@string/text1"
+                android:textColor="@color/textBlock"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="22dp"
+                tools:context=".MainActivity">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="21dp"
+                    tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/post3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Fron-End\nDevelopment"
+                    android:textStyle="italic"
+                    android:textColor="@color/textBlock"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/image4"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/html" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="18dp"
+                    tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/post4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Android\nDevelopment"
+                    android:textStyle="italic"
+                    android:textColor="@color/textBlock"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:maxWidth="50dp"
+                    android:maxHeight="50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cogwheels"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/post2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="8dp"
+                android:layout_margin="4dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/text3"
+                android:textColor="@color/textBlock"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:maxWidth="40dp"
+                android:maxHeight="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/computing"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
 </ScrollView>
 </RelativeLayout>
